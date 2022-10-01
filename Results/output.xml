@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221001 15:00:33.754" rpa="false" schemaversion="3">
+<suite id="s1" name="Exercicios" source="C:\Users\Arlison\Desktop\Exercicios_2\Tests\Exercicios.robot">
+<test id="s1-t1" name="1 - Exercício Dicionário" line="8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${DADOS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:33.847" endtime="20221001 15:00:33.849"/>
+</kw>
+<tag>dicionario</tag>
+<status status="PASS" starttime="20221001 15:00:33.845" endtime="20221001 15:00:33.849"/>
+</test>
+<test id="s1-t2" name="2 - Exercício Argumentos e Retornos + If Simples" line="17">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${idade} anos</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:33.993" endtime="20221001 15:00:34.054"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${ano}</var>
+<arg>2022 - ${idade}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.105" level="INFO">${ano} = 1998</msg>
+<status status="PASS" starttime="20221001 15:00:34.104" endtime="20221001 15:00:34.105"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nNasceu no ano de ${ano}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.117" endtime="20221001 15:00:34.119"/>
+</kw>
+<if>
+<branch type="IF" condition="${ano} &lt; 2000">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Nasceu no século passado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.120" endtime="20221001 15:00:34.122"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.120" endtime="20221001 15:00:34.122"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.119" endtime="20221001 15:00:34.122"/>
+</if>
+<tag>if</tag>
+<tag>simples</tag>
+<status status="PASS" starttime="20221001 15:00:33.852" endtime="20221001 15:00:34.123"/>
+</test>
+<test id="s1-t3" name="3 - Exercício For Simples + Lista" line="30">
+<for flavor="IN">
+<var>${fruta}</var>
+<value>@{frutas}</value>
+<iter>
+<var name="${fruta}">banana</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.135" endtime="20221001 15:00:34.137"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.135" endtime="20221001 15:00:34.137"/>
+</iter>
+<iter>
+<var name="${fruta}">maçã</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.138" endtime="20221001 15:00:34.140"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.137" endtime="20221001 15:00:34.140"/>
+</iter>
+<iter>
+<var name="${fruta}">uva</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.142" endtime="20221001 15:00:34.203"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.140" endtime="20221001 15:00:34.203"/>
+</iter>
+<iter>
+<var name="${fruta}">pera</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.203" endtime="20221001 15:00:34.205"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.203" endtime="20221001 15:00:34.205"/>
+</iter>
+<iter>
+<var name="${fruta}">abacaxi</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.207" endtime="20221001 15:00:34.208"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.206" endtime="20221001 15:00:34.208"/>
+</iter>
+<status status="PASS" starttime="20221001 15:00:34.134" endtime="20221001 15:00:34.208"/>
+</for>
+<tag>lista</tag>
+<status status="PASS" starttime="20221001 15:00:34.125" endtime="20221001 15:00:34.217"/>
+</test>
+<test id="s1-t4" name="4 - Exercício If Inline + For in Range" line="39">
+<for flavor="IN RANGE">
+<var>${numero}</var>
+<value>0</value>
+<value>11</value>
+<iter>
+<var name="${numero}">0</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.223" endtime="20221001 15:00:34.228"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.223" endtime="20221001 15:00:34.228"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.223" endtime="20221001 15:00:34.229"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.231" level="INFO">${contador} = 1</msg>
+<status status="PASS" starttime="20221001 15:00:34.229" endtime="20221001 15:00:34.231"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.231" endtime="20221001 15:00:34.233"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.222" endtime="20221001 15:00:34.233"/>
+</iter>
+<iter>
+<var name="${numero}">1</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="PASS" starttime="20221001 15:00:34.234" endtime="20221001 15:00:34.234"/>
+</continue>
+<status status="PASS" starttime="20221001 15:00:34.234" endtime="20221001 15:00:34.235"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.233" endtime="20221001 15:00:34.235"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.236" endtime="20221001 15:00:34.236"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.236" endtime="20221001 15:00:34.237"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.233" endtime="20221001 15:00:34.237"/>
+</iter>
+<iter>
+<var name="${numero}">2</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.238" endtime="20221001 15:00:34.238"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.238" endtime="20221001 15:00:34.239"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.237" endtime="20221001 15:00:34.239"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.241" level="INFO">${contador} = 2</msg>
+<status status="PASS" starttime="20221001 15:00:34.239" endtime="20221001 15:00:34.241"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.241" endtime="20221001 15:00:34.253"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.237" endtime="20221001 15:00:34.253"/>
+</iter>
+<iter>
+<var name="${numero}">3</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="PASS" starttime="20221001 15:00:34.255" endtime="20221001 15:00:34.255"/>
+</continue>
+<status status="PASS" starttime="20221001 15:00:34.255" endtime="20221001 15:00:34.255"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.254" endtime="20221001 15:00:34.256"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.256" endtime="20221001 15:00:34.256"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.257" endtime="20221001 15:00:34.257"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.254" endtime="20221001 15:00:34.257"/>
+</iter>
+<iter>
+<var name="${numero}">4</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.260" endtime="20221001 15:00:34.260"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.258" endtime="20221001 15:00:34.260"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.258" endtime="20221001 15:00:34.260"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.264" level="INFO">${contador} = 3</msg>
+<status status="PASS" starttime="20221001 15:00:34.262" endtime="20221001 15:00:34.264"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.264" endtime="20221001 15:00:34.270"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.257" endtime="20221001 15:00:34.271"/>
+</iter>
+<iter>
+<var name="${numero}">5</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="PASS" starttime="20221001 15:00:34.272" endtime="20221001 15:00:34.272"/>
+</continue>
+<status status="PASS" starttime="20221001 15:00:34.272" endtime="20221001 15:00:34.272"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.271" endtime="20221001 15:00:34.272"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.273" endtime="20221001 15:00:34.274"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.274" endtime="20221001 15:00:34.274"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.271" endtime="20221001 15:00:34.274"/>
+</iter>
+<iter>
+<var name="${numero}">6</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.276" endtime="20221001 15:00:34.276"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.275" endtime="20221001 15:00:34.276"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.275" endtime="20221001 15:00:34.276"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.277" level="INFO">${contador} = 4</msg>
+<status status="PASS" starttime="20221001 15:00:34.276" endtime="20221001 15:00:34.278"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.278" endtime="20221001 15:00:34.285"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.275" endtime="20221001 15:00:34.285"/>
+</iter>
+<iter>
+<var name="${numero}">7</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="PASS" starttime="20221001 15:00:34.286" endtime="20221001 15:00:34.286"/>
+</continue>
+<status status="PASS" starttime="20221001 15:00:34.286" endtime="20221001 15:00:34.286"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.285" endtime="20221001 15:00:34.286"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.287" endtime="20221001 15:00:34.287"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.287" endtime="20221001 15:00:34.288"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.285" endtime="20221001 15:00:34.288"/>
+</iter>
+<iter>
+<var name="${numero}">8</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.289" endtime="20221001 15:00:34.289"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.289" endtime="20221001 15:00:34.289"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.288" endtime="20221001 15:00:34.289"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.291" level="INFO">${contador} = 5</msg>
+<status status="PASS" starttime="20221001 15:00:34.290" endtime="20221001 15:00:34.291"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.292" endtime="20221001 15:00:34.295"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.288" endtime="20221001 15:00:34.295"/>
+</iter>
+<iter>
+<var name="${numero}">9</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="PASS" starttime="20221001 15:00:34.297" endtime="20221001 15:00:34.297"/>
+</continue>
+<status status="PASS" starttime="20221001 15:00:34.296" endtime="20221001 15:00:34.297"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.296" endtime="20221001 15:00:34.297"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.298" endtime="20221001 15:00:34.298"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.298" endtime="20221001 15:00:34.298"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.296" endtime="20221001 15:00:34.299"/>
+</iter>
+<iter>
+<var name="${numero}">10</var>
+<if>
+<branch type="IF" condition="${numero} % 2 == 1">
+<continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.300" endtime="20221001 15:00:34.300"/>
+</continue>
+<status status="NOT RUN" starttime="20221001 15:00:34.299" endtime="20221001 15:00:34.300"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.299" endtime="20221001 15:00:34.300"/>
+</if>
+<kw name="Evaluate" library="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.302" level="INFO">${contador} = 6</msg>
+<status status="PASS" starttime="20221001 15:00:34.300" endtime="20221001 15:00:34.302"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.302" endtime="20221001 15:00:34.308"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.299" endtime="20221001 15:00:34.318"/>
+</iter>
+<status status="PASS" starttime="20221001 15:00:34.221" endtime="20221001 15:00:34.319"/>
+</for>
+<kw name="Log To Console" library="BuiltIn">
+<arg>o FOR tem ${contador} números pares</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.321" endtime="20221001 15:00:34.324"/>
+</kw>
+<tag>inline</tag>
+<status status="PASS" starttime="20221001 15:00:34.219" endtime="20221001 15:00:34.325"/>
+</test>
+<test id="s1-t5" name="5 - Exercício Try + Except + Finally" line="51">
+<for flavor="IN">
+<var>${item}</var>
+<value>@{lista}</value>
+<iter>
+<var name="${item}">A</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.353" level="FAIL">Evaluating expression '[] + [A]' failed: NameError: name 'A' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20221001 15:00:34.331" endtime="20221001 15:00:34.362"/>
+</kw>
+<status status="FAIL" starttime="20221001 15:00:34.331" endtime="20221001 15:00:34.364"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.365" endtime="20221001 15:00:34.367"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.365" endtime="20221001 15:00:34.368"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.368" endtime="20221001 15:00:34.370"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.368" endtime="20221001 15:00:34.370"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.331" endtime="20221001 15:00:34.370"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.330" endtime="20221001 15:00:34.370"/>
+</iter>
+<iter>
+<var name="${item}">1</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.372" level="INFO">${lista_nova} = [1]</msg>
+<status status="PASS" starttime="20221001 15:00:34.371" endtime="20221001 15:00:34.372"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.371" endtime="20221001 15:00:34.373"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.374" endtime="20221001 15:00:34.374"/>
+</kw>
+<status status="NOT RUN" starttime="20221001 15:00:34.374" endtime="20221001 15:00:34.374"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.375" endtime="20221001 15:00:34.377"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.375" endtime="20221001 15:00:34.377"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.371" endtime="20221001 15:00:34.377"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.370" endtime="20221001 15:00:34.377"/>
+</iter>
+<iter>
+<var name="${item}">B</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.382" level="FAIL">Evaluating expression '[1] + [B]' failed: NameError: name 'B' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20221001 15:00:34.378" endtime="20221001 15:00:34.383"/>
+</kw>
+<status status="FAIL" starttime="20221001 15:00:34.378" endtime="20221001 15:00:34.383"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.384" endtime="20221001 15:00:34.385"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.384" endtime="20221001 15:00:34.386"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.386" endtime="20221001 15:00:34.398"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.386" endtime="20221001 15:00:34.398"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.378" endtime="20221001 15:00:34.398"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.378" endtime="20221001 15:00:34.399"/>
+</iter>
+<iter>
+<var name="${item}">2</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.401" level="INFO">${lista_nova} = [1, 2]</msg>
+<status status="PASS" starttime="20221001 15:00:34.400" endtime="20221001 15:00:34.401"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.399" endtime="20221001 15:00:34.401"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.402" endtime="20221001 15:00:34.402"/>
+</kw>
+<status status="NOT RUN" starttime="20221001 15:00:34.402" endtime="20221001 15:00:34.402"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.403" endtime="20221001 15:00:34.404"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.403" endtime="20221001 15:00:34.405"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.399" endtime="20221001 15:00:34.405"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.399" endtime="20221001 15:00:34.405"/>
+</iter>
+<iter>
+<var name="${item}">C</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.412" level="FAIL">Evaluating expression '[1, 2] + [C]' failed: NameError: name 'C' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20221001 15:00:34.406" endtime="20221001 15:00:34.414"/>
+</kw>
+<status status="FAIL" starttime="20221001 15:00:34.406" endtime="20221001 15:00:34.415"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.415" endtime="20221001 15:00:34.419"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.415" endtime="20221001 15:00:34.419"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.419" endtime="20221001 15:00:34.421"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.419" endtime="20221001 15:00:34.421"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.405" endtime="20221001 15:00:34.421"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.405" endtime="20221001 15:00:34.421"/>
+</iter>
+<iter>
+<var name="${item}">3</var>
+<try>
+<branch type="TRY">
+<kw name="Evaluate" library="BuiltIn">
+<var>${lista_nova}</var>
+<arg>${lista_nova} + [${item}]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221001 15:00:34.428" level="INFO">${lista_nova} = [1, 2, 3]</msg>
+<status status="PASS" starttime="20221001 15:00:34.424" endtime="20221001 15:00:34.428"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.423" endtime="20221001 15:00:34.429"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${item} não é um número</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221001 15:00:34.430" endtime="20221001 15:00:34.440"/>
+</kw>
+<status status="NOT RUN" starttime="20221001 15:00:34.429" endtime="20221001 15:00:34.440"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\na nova lista com apenas numeros${lista_nova}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221001 15:00:34.441" endtime="20221001 15:00:34.444"/>
+</kw>
+<status status="PASS" starttime="20221001 15:00:34.440" endtime="20221001 15:00:34.444"/>
+</branch>
+<status status="PASS" starttime="20221001 15:00:34.423" endtime="20221001 15:00:34.444"/>
+</try>
+<status status="PASS" starttime="20221001 15:00:34.421" endtime="20221001 15:00:34.444"/>
+</iter>
+<status status="PASS" starttime="20221001 15:00:34.330" endtime="20221001 15:00:34.445"/>
+</for>
+<tag>try</tag>
+<status status="PASS" starttime="20221001 15:00:34.328" endtime="20221001 15:00:34.446"/>
+</test>
+<doc>Arlison Marreiro Nascimento</doc>
+<status status="PASS" starttime="20221001 15:00:33.761" endtime="20221001 15:00:34.448"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">dicionario</stat>
+<stat pass="1" fail="0" skip="0">if</stat>
+<stat pass="1" fail="0" skip="0">inline</stat>
+<stat pass="1" fail="0" skip="0">lista</stat>
+<stat pass="1" fail="0" skip="0">simples</stat>
+<stat pass="1" fail="0" skip="0">try</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Exercicios">Exercicios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
